@@ -11,6 +11,13 @@ namespace RewindMVC.Controllers
             return View();
         }
 
+        public IActionResult App()
+        {
+            var model = new Rewind();
+
+            return View(model);
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
